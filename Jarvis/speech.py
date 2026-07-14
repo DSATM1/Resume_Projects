@@ -1,11 +1,11 @@
-import speech_recognition as sr
-import pyttsx3
+import speech_recognition as sr  #type:ignore
+import pyttsx3  #type:ignore
 
 
 def speak(text: str) -> None:
-    engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
+    engine = pyttsx3.init()  #type:ignore
+    engine.say(text)  #type:ignore
+    engine.runAndWait()  #type:ignore
 
 
 def listen() -> str:
@@ -21,9 +21,9 @@ def listen() -> str:
             return ""
 
     try:
-        text = recognizer.recognize_google(audio)
+        text = recognizer.recognize_google(audio) #type:ignore
         print(f"You said: {text}")
-        return text
+        return text  #type:ignore
     except sr.UnknownValueError:
         print("Sorry, I could not understand what you said.")
         return ""
