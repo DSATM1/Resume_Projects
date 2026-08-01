@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact QR Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Contact QR Generator</h1>
+      <p>Enter your details and generate a QR that shows your contact info when scanned.</p>
+    </header>
+
+    <section class="form-panel">
+      <label>
+        Name
+        <input id="name" type="text" value="Suraj S P" />
+      </label>
+      <label>
+        Phone
+        <input id="phone" type="tel" value="7975627135" />
+      </label>
+      <label>
+        Email
+        <input id="email" type="email" value="surajspokale@gmail.com" />
+      </label>
+
+      <div class="buttons">
+        <button id="generateBtn">Generate QR</button>
+        <button id="downloadBtn" disabled>Download QR</button>
+      </div>
+    </section>
+
+    <section class="result-panel">
+      <div class="qr-card">
+        <div id="qrContainer" class="qr-container"></div>
+        <p class="hint">Scan this QR with your phone to view the contact info.</p>
+      </div>
+
+      <details class="payload-panel" open>
+        <summary>Raw QR Payload</summary>
+        <pre id="rawPayload"></pre>
+      </details>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
